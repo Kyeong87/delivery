@@ -1,0 +1,14 @@
+version: '3.4'
+
+services:
+  redis_delivery:
+    image: redis
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "6380:6379"
+    expose:
+      - "6380"
+    stdin_open: true
+    tty: true
